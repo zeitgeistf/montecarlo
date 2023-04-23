@@ -1,0 +1,44 @@
+(project) ➜ montecarlo main ✗ (?) python tests/montecarlo_tests.py
+test_analyzer_initialization (__main__.AnalyzerTestSuite.test_analyzer_initialization)
+PURPOSE: Ensure analyzer object is instantiated correctly. ... ok
+test_analyzer_initialization_falsy (__main__.AnalyzerTestSuite.test_analyzer_initialization_falsy)
+PURPOSE: Instantiation should fail if no dice is detected from the input. ... ok
+test_calculate_combos (__main__.AnalyzerTestSuite.test_calculate_combos)
+PURPOSE: Ensure correct combos are returned from the method. ... ok
+test_calculate_jackpots (__main__.AnalyzerTestSuite.test_calculate_jackpots)
+PURPOSE: Ensure correct number of identical face rolled is returned. ... ok
+test_ccalculate_face_rolled_occurrences (__main__.AnalyzerTestSuite.test_ccalculate_face_rolled_occurrences)
+PURPOSE: Ensure the transformation happens correctly when unstack face rolled. ... ok
+test_die_initialization_1 (__main__.DieTestSuite.test_die_initialization_1)
+PURPOSE: A dataframe with numeric faces and weights gets ... ok
+test_die_initialization_3 (__main__.DieTestSuite.test_die_initialization_3)
+PURPOSE: A dataframe with string faces and weights gets ... ok
+test_die_roll (__main__.DieTestSuite.test_die_roll)
+PURPOSE: Test if roll method returns correct output when triggered ... ok
+test_die_show (__main__.DieTestSuite.test_die_show)
+PURPOSE: Test if the show method can display the result dataframe correctly ... ok
+test_die_update_weight (__main__.DieTestSuite.test_die_update_weight)
+PURPOSE: Weight should be updated upon calling update_weight method ... ok
+test_die_update_weight_with_incorrect_face (__main__.DieTestSuite.test_die_update_weight_with_incorrect_face)
+PURPOSE: Test if this method errors out when passing in a face value that doesn't exists ... ok
+test_die_update_weight_with_incorrect_weight (__main__.DieTestSuite.test_die_update_weight_with_incorrect_weight)
+PURPOSE: Test if this method errors out when passing in a weight that is not numeric ... ok
+test_game_initialization (__main__.GameTestSuite.test_game_initialization)
+PURPOSE: Test to make sure game object can be successfully created. ... ok
+test_get_die_number (__main__.GameTestSuite.test_get_die_number)
+PURPOSE: Ensure correct die number mapped list can be returned. ... ok
+test_get_roll_number (__main__.GameTestSuite.test_get_roll_number)
+PURPOSE: Ensure correct roll number mapped list can be returned. ... ok
+test_play (__main__.GameTestSuite.test_play)
+PURPOSE: Ensure play method returns correct dataframe. ... ok
+test_roll_dice (__main__.GameTestSuite.test_roll_dice)
+PURPOSE: Ensure correct dice rolling results can be returned. ... ok
+test_show_narrow (__main__.GameTestSuite.test_show_narrow)
+PURPOSE: Ensure show method returns the dataframe in the correct ... ok
+test_show_wide (__main__.GameTestSuite.test_show_wide)
+PURPOSE: Ensure show method returns the dataframe in the correct ... ok
+
+----------------------------------------------------------------------
+Ran 19 tests in 0.022s
+
+OK
