@@ -239,7 +239,7 @@ class Analyzer:
 
         self.jackpots_df = occurrences_df[occurrences_df['occurrences'] == self.num_of_dice]
         return self.jackpots_df.shape[0]
-        
+
     def calculate_combos(self) -> None:
         """
         PURPOSE: This method computes the distinct combinations of faces rolled, along with their counts,
@@ -260,20 +260,24 @@ class Analyzer:
             with only distinct values)
                     face_rolled
         roll_number
-        1             {2}
-        2             {1, 3}
-        3             {4, 6}
+        1             (2, 2)
+        2             (1, 3)
+        3             (4, 6)
     
         STEP 2 (conduct another group by on the indexed face rolled set and count their occurrences)
                      ocurrances
         face_rolled
-        {2}               1
-        {1, 3}            1
-        {4, 6}            1
+        (1, 3)            1
+        (2, 2)            1
+        (4, 6)            1
         """
-        self.combos_df = self.game.show(display='narrow') \
+        df = self.game.show(display='narrow') \
             .groupby('roll_number') \
-            .agg({'face_rolled': set}) \
+            .agg({'face_rolled': tuple})
+        
+        df['face_rolled'] = [tuple(sorted(x)) for x in df['face_rolled']]
+
+        self.combos_df = df \
             .astype({'face_rolled': 'str'}) \
             .groupby('face_rolled') \
             .size() \

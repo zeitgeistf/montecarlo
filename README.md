@@ -13,6 +13,12 @@ cd montecarlo
 pip install -e .
 ```
 
+### Testing 🧪
+To run unit tests, use the following command at root level directory
+```bash
+python tests/montecarlo_tests.py
+```
+
 ### Importing 🔪
 Once the program is installed, the modules need to be imported into another script or program first in order to be used.
 (Alternative way to avoid creating new script is playaround the package using the "motecarlo_demo.ipynb" notebook located in the root folder)
